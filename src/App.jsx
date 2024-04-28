@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import UTSLogo from './src/UTS_assistant_Logo.png';
 
 const App=()=>
  {
@@ -18,7 +19,7 @@ const App=()=>
   return(
     <>
     <div className="top" >
-    <img src="src/UTS_assistant_Logo.png" width="100"/>
+    <img src={UTSLogo} width="100" alt="UTS_assistant_Logo.png"/>
     </div>
 
     <div className="background">
