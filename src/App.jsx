@@ -18,7 +18,7 @@ const App=()=>
   return(
     <>
     <div className="top" >
-    <img src="/UTS_assistant_Logo.png" width="100" />
+    <img src="./UTS_assistant_Logo.png" width="100" />
     </div>
 
     <div className="background">
