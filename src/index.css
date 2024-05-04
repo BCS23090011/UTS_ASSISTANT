@@ -16,14 +16,30 @@ body
 
 .background
 {
-height: 70vh;
+height: 69.8vh;
 max-width:100%; 
-background-color: rgb(9, 9, 90);
+background-color: rgb(30,30,110);
 justify-content: center;
 align-items: center;
 color:white;
 }
+.user_question
+{
+  padding: 30px; /* Adjust this value to match the desired padding */
+  margin: 20px auto; /* Center the elements horizontally */
+  max-width: 100%; /* Set a maximum width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  background-color: rgb(100, 100, 200);
+}
 
+.respond
+{
+  padding: 30px; /* Adjust this value to match the desired padding */
+  margin: 20px auto; /* Center the elements horizontally */
+  max-width: 100%; /* Set a maximum width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  background-color: rgb(100, 100, 200);
+}
 
 .text_box {
   position: relative;

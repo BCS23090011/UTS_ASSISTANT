@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import UTSLogo from "./UTS_assistant_Logo.png";
 
 const App=()=>
  {
@@ -18,17 +19,23 @@ const App=()=>
   return(
     <>
     <div className="top" >
-    <img src="./src/UTS_assistant_Logo.png" width="100" />
+    <img src={UTSLogo} width="100" alt="UTS Assistant Logo" />
     </div>
 
     <div className="background">
-        <p>Assistant:{response}</p>
+      <div className="user_question">
+        <p>User:</p>
+        <p>{value}</p>
+      </div>
+      <div className="respond">
+        <p>Assistant:</p>
+        <p>{response}</p>
+      </div>
     </div>
 
     <div className="text_box" placeholder="Please type something....." type="text" value={value} onChange={onChange} ><input/>
     <div id="submit" onClick={handleSubmit}>➢</div>
     </div>
-
     </>
   )
 }
