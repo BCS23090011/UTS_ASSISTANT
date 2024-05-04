@@ -2,6 +2,11 @@ import express from "express";
 import cors from "cors";
 import fs from "fs";
 import { OpenAI } from "openai";
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 3005;
@@ -10,6 +15,14 @@ const openai = new OpenAI({ apiKey: apiKey });
 
 app.use(cors());
 app.use(express.json());
+
+const staticPath = path.resolve(__dirname,'dist');
+app.use(express.static(staticPath));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(staticPath, 'index.html'));
+  });
+  
 
 app.post("/chatbot", async (req, res) => {
   const { question } = req.body;
