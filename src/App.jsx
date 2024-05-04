@@ -10,7 +10,7 @@ const App=()=>
   const onChange = (e) => setValue(e.target.value);
 
   const handleSubmit = async () => {
-    const response = await axios.post("https://uts-assistant.onrender.com//chatbot", {
+    const response = await axios.post("https://uts-assistant.onrender.com/chatbot", {
       question: value,
     });
     setResponse(response.data);
