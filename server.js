@@ -48,7 +48,7 @@ app.post("/chatbot", async (req, res) => {
                   },
               ],
               model: "gpt-3.5-turbo",
-              max_tokens: 300,
+              max_tokens: 400,
           });
       } else {
           // No combined question available, use only user question
